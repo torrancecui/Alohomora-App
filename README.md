@@ -1,4 +1,7 @@
 # Alohomora-App
 Web app that reads Spotify users' playlists and sorts them into Harry Potter Houses based on their music tastes.
 
-#### Created by Torrance Cui June 2021
+#### Credits
+
+Created by Torrance Cui June 2021.
+Backend taken from https://github.com/mpj/oauth-bridge-template
