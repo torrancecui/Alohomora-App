@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p className = "App-title">
-          Welcome to Alohomora.
+          welcome to alohomora.
         </p>
         <div className = "Banner">
           {/* <div className = "leftBanner"> 
@@ -27,7 +27,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Your house is...
+          your house is ...
         </a>
         <p className = "Credits"> developed by torrance cui. all harry potter credit to jk rowling.</p>
       </header>
