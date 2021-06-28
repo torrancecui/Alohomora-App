@@ -1,9 +1,11 @@
 // import logo from './logo.svg';
 // import hpLogo from './hpLogo.svg';
 import houses from './houses.png';
+import React, {Component} from 'react';
 import './App.css';
 
 function App() {
+  let house = "hufflepuff";
   return (
     <div className="App">
       <header className="App-header">
@@ -21,18 +23,21 @@ function App() {
             <img src={hpLogo} className="App-logo" alt="hpLogo" />
           </div> */}
         </div>
+        
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          your house is ...
+          your house is ... {house}
         </a>
+        
         <div className = "Credits">
           <p>developed by torrance</p>
           <p>hp credit to ms.rowling</p>
         </div>
+
       </header>
     </div>
   );

@@ -47,16 +47,16 @@
 
 .App-link {
   color: black;
-  border: 1px dotted black;
-  border-radius: 30px;
+  /* border: 1px dotted black;
+  border-radius: 30px; */
   font-size: medium;
   text-decoration: none;
   padding: 20px;
 }
 
-.App-link:hover{
+/* .App-link:hover{
   border: 1px solid black;
-}
+} */
 
 .Credits{
   font-size: 10px;
