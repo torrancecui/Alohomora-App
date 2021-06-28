@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import hpLogo from './hpLogo.svg';
+// import hpLogo from './hpLogo.svg';
 import houses from './houses.png';
 import './App.css';
 
@@ -10,8 +10,17 @@ function App() {
         <p className = "App-title">
           Welcome to Alohomora.
         </p>
-        <img src = {houses} className= "Houses-img" alt = "houses" />
-        <img src={hpLogo} className="App-logo" alt="hpLogo" />
+        <div className = "Banner">
+          {/* <div className = "leftBanner"> 
+            <img src={hpLogo} className="App-logo" alt="hpLogo" />
+          </div> */}
+          <div className = "centerBanner"> 
+            <img src = {houses} className= "Houses-img" alt = "houses" />
+          </div>
+          {/* <div className = "rightBanner"> 
+            <img src={hpLogo} className="App-logo" alt="hpLogo" />
+          </div> */}
+        </div>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -20,6 +29,7 @@ function App() {
         >
           Your house is...
         </a>
+        <p className = "Credits"> developed by torrance cui. all harry potter credit to jk rowling.</p>
       </header>
     </div>
   );

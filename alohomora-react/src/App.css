@@ -4,10 +4,8 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
-  z-index: 1;
-  opacity: 0.5;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -17,8 +15,23 @@
 }
 
 .Houses-img{
-  height: 40vmin;
-  z-index: 2;
+  height: 30vmin;
+}
+
+.leftBanner{
+  width: 25%;
+  float: left;
+}
+
+.centerBanner{
+  width: 50%;
+  float: left;
+  padding: 30px;
+}
+
+.rightBanner{
+  width: 25%;
+  float: left;
 }
 
 .App-header {
@@ -32,13 +45,22 @@
   color: black;
 }
 
-.App-title{
-  z-index: 2;
-}
-
 .App-link {
   color: black;
-  z-index: 2;
+  border: 1px dotted black;
+  border-radius: 25px;
+  font-size: large;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.App-link:hover{
+  border: 1px solid black;
+}
+
+.Credits{
+  font-size: 10px;
+  padding-top: 100px;
 }
 
 @keyframes App-logo-spin {
