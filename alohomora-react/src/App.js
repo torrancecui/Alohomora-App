@@ -29,7 +29,10 @@ function App() {
         >
           your house is ...
         </a>
-        <p className = "Credits"> developed by torrance cui. all harry potter credit to jk rowling.</p>
+        <div className = "Credits">
+          <p>developed by torrance</p>
+          <p>hp credit to ms.rowling</p>
+        </div>
       </header>
     </div>
   );

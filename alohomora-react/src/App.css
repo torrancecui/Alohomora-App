@@ -48,10 +48,10 @@
 .App-link {
   color: black;
   border: 1px dotted black;
-  border-radius: 25px;
-  font-size: large;
+  border-radius: 30px;
+  font-size: medium;
   text-decoration: none;
-  padding: 10px;
+  padding: 20px;
 }
 
 .App-link:hover{
