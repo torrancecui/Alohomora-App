@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  font-family: Courier New;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -13,19 +14,53 @@
   }
 }
 
+.Houses-img{
+  height: 30vmin;
+}
+
+.leftBanner{
+  width: 25%;
+  float: left;
+}
+
+.centerBanner{
+  width: 50%;
+  float: left;
+  padding: 30px;
+}
+
+.rightBanner{
+  width: 25%;
+  float: left;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
-  color: #61dafb;
+  color: black;
+  border: 1px dotted black;
+  border-radius: 30px;
+  font-size: medium;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.App-link:hover{
+  border: 1px solid black;
+}
+
+.Credits{
+  font-size: 10px;
+  padding-top: 100px;
 }
 
 @keyframes App-logo-spin {
