@@ -5,10 +5,10 @@ import React, {Component} from 'react';
 import './App.css';
 
 const houses = ["hufflepuff", "gryffindor", "slytherin", "ravenclaw"];
+//random number between 0-3
+let rand_num = Math.floor( (Math.random() * 4));
 
 function App() {
-  //random number between 0-3
-  let rand_num = Math.floor( (Math.random() * 4));
   return (
     <div className="App">
       <header className="App-header">
