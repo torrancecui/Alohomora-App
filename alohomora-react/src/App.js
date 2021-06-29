@@ -8,7 +8,7 @@ const houses = ["hufflepuff", "gryffindor", "slytherin", "ravenclaw"];
 
 function App() {
   //random number between 0-3
-  let rand_num = Math.floor( (Math.random() * 3) + 1 );
+  let rand_num = Math.floor( (Math.random() * 4));
   return (
     <div className="App">
       <header className="App-header">
