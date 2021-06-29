@@ -2,11 +2,14 @@
 // import hpLogo from './hpLogo.svg';
 import houses_img from './houses.png';
 import React, {Component} from 'react';
+import queryString from 'query-string';
 import './App.css';
 
 const houses = ["hufflepuff", "gryffindor", "slytherin", "ravenclaw"];
 //random number between 0-3
 let rand_num = Math.floor( (Math.random() * 4));
+let parsed = queryString.parse(window.location.search);
+let accessToken = parsed.access_token;
 
 function App() {
   return (
