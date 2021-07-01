@@ -3,64 +3,52 @@
   font-family: Courier New;
 }
 
-.App-logo {
-  height: 20vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-title{
+  font-size: 30px;
+  padding-top: 30px;
 }
 
 .Houses-img{
   height: 30vmin;
 }
 
-.leftBanner{
-  width: 25%;
-  float: left;
-}
-
-.centerBanner{
-  width: 50%;
-  float: left;
+.Banner{
   padding: 30px;
 }
 
-.rightBanner{
-  width: 25%;
-  float: left;
-}
-
-.App-header {
+.App-body {
   background-color: white;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: black;
+  font-size: 20px;
 }
-
-.App-link {
-  color: black;
-  /* border: 1px dotted black;
-  border-radius: 30px; */
-  font-size: medium;
-  text-decoration: none;
-  padding: 20px;
-}
-
-/* .App-link:hover{
-  border: 1px solid black;
-} */
 
 .Credits{
   font-size: 10px;
-  padding-top: 100px;
+  padding-top: 50px;
+}
+
+.Login-logo {
+  pointer-events: none;
+  padding: 30px;
+}
+
+.Login-img{
+  height: 30vmin;
+}
+
+.Login-button{
+  padding: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Login-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 @keyframes App-logo-spin {
