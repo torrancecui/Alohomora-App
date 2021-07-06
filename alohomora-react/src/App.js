@@ -12,6 +12,7 @@ import "./App.css";
 
 const houses = ["hufflepuff", "gryffindor", "slytherin", "ravenclaw"];
 let rand_num = Math.floor(Math.random() * 4);
+let accessToken;
 
 class Gryffindor extends Component{
   render(){
@@ -33,7 +34,6 @@ class Ravenclaw extends Component{
     return <img src = {ravenclaw} className= "Houses-img" alt = "houses" />
   }
 }
-
 class HouseDecision extends Component{
   render(){
     let houseIcon;
@@ -69,7 +69,7 @@ class App extends Component {
   }
   componentDidMount() {
     let parsed = queryString.parse(window.location.search);
-    let accessToken = parsed.access_token;
+    accessToken = parsed.access_token;
     if (!accessToken) return;
     fetch("https://api.spotify.com/v1/me", {
       headers: { Authorization: "Bearer " + accessToken },
@@ -82,23 +82,22 @@ class App extends Component {
           },
         })
       );
-
-    fetch("https://api.spotify.com/v1/me/playlists", {
-      headers: { Authorization: "Bearer " + accessToken },
-    })
-      .then((response) => response.json())
-      .then((data) =>
-        this.setState({
-          playlists: data.items.map((item) => {
-            console.log(data.items);
-            return {
-              name: item.name,
-              imageUrl: item.images[0].url,
-              songs: [],
-            };
-          }),
-        })
-      );
+    // fetch("https://api.spotify.com/v1/me/playlists", {
+    //   headers: { Authorization: "Bearer " + accessToken },
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) =>
+    //     this.setState({
+    //       playlists: data.items.map((item) => {
+    //         console.log(data.items);
+    //         return {
+    //           name: item.name,
+    //           imageUrl: item.images[0].url,
+    //           songs: [],
+    //         };
+    //       }),
+    //     })
+    //   );
   }
   render() {
     return (
