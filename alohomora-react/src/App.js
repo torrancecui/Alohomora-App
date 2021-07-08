@@ -11,8 +11,9 @@ import queryString from "query-string";
 import "./App.css";
 
 const houses = ["hufflepuff", "gryffindor", "slytherin", "ravenclaw"];
-let rand_num = Math.floor(Math.random() * 4);
+// let rand_num = Math.floor(Math.random() * 4);
 let accessToken;
+let username = "";
 
 class Gryffindor extends Component{
   render(){
@@ -36,8 +37,13 @@ class Ravenclaw extends Component{
 }
 class HouseDecision extends Component{
   render(){
+    let hash = 0;
+    for (let i = 0; i < username.length; i++) {
+      hash += username.charCodeAt(i);
+    }
+    let hashNum = hash % 4;
     let houseIcon;
-    let house = houses[rand_num];
+    let house = houses[hashNum];
     if (house === 'gryffindor'){
       houseIcon =  <Gryffindor />;
     }else if (house === 'slytherin'){
@@ -98,6 +104,7 @@ class App extends Component {
     //       }),
     //     })
     //   );
+    
   }
   render() {
     return (
@@ -109,7 +116,7 @@ class App extends Component {
         //content if user is signed in already
           <header className="App-body">
             <p>
-              hi {this.state.user.name}
+              hi {username = this.state.user.name}
             </p>
             <HouseDecision />
         </header>
