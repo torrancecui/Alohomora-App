@@ -1,0 +1,61 @@
+.App {
+    text-align: center;
+    font-family: Courier New;
+  }
+  
+  .Title{
+    font-size: 30px;
+    padding-top: 30px;
+  }
+  
+  .Houses-img{
+    height: 30vmin;
+    padding: 10px;
+  }
+  
+  .Banner{
+    padding: 30px;
+  }
+  
+  .Content{
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 20px;
+  }
+  
+  .Credits{
+    font-size: 10px;
+    padding-top: 50px;
+  }
+  
+  .Login-logo {
+    pointer-events: none;
+    padding: 30px;
+  }
+  
+  .Login-img{
+    height: 30vmin;
+  }
+  
+  .Login-button{
+    padding: 20px;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .Login-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

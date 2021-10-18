@@ -3,21 +3,21 @@
   font-family: Courier New;
 }
 
-.App-title{
+.Title {
   font-size: 30px;
   padding-top: 30px;
 }
 
-.Houses-img{
+.Houses-img {
   height: 30vmin;
   padding: 10px;
 }
 
-.Banner{
+.Banner {
   padding: 30px;
 }
 
-.App-body {
+.Content {
   min-height: 60vh;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@
   font-size: 20px;
 }
 
-.Credits{
+.Credits {
   font-size: 10px;
   padding-top: 50px;
 }
@@ -37,11 +37,11 @@
   padding: 30px;
 }
 
-.Login-img{
+.Login-img {
   height: 30vmin;
 }
 
-.Login-button{
+.Login-button {
   padding: 20px;
 }
 
@@ -50,7 +50,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -59,3 +58,5 @@
     transform: rotate(360deg);
   }
 }
+
+/*# sourceMappingURL=App.css.map */
