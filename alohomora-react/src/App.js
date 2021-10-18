@@ -16,7 +16,7 @@ let username = "";
 function Title(){
   return(
     <div class = "Title">
-        <p>welcome to alohomora.</p>
+        <p>welcome to alohomora ϟ</p>
     </div>
   );
 }
@@ -26,7 +26,7 @@ function Credits(){
   return(
     <div class = "Credits">
       <p>developed by torrance</p>
-      <p>hp credit to ms.rowling</p>
+      <p>harry potter credits to ms.rowling</p>
     </div>
   );
 }
@@ -67,7 +67,18 @@ class HouseDecision extends Component{
 
     return (
       <div class = "Decision">
-        <div class = "Banner">
+        <div 
+          class = "Banner"
+          style={
+            { 
+              background: house === 'slytherin' ? "#caffbf" : 
+                          house === 'ravenclaw' ? "#a0c4ff" : 
+                          house === 'gryffindor' ? "#ffadad" : 
+                          house === 'hufflepuff' ? "#fdffb6" : 
+                          "" 
+            }
+          }
+        >
           {house === 'gryffindor' && <img src = {gryffindor} class= "Houses-img" alt = "gryffindor" />}
           {house === 'hufflepuff' && <img src = {hufflepuff} class= "Houses-img" alt = "hufflepuff" />}
           {house === 'slytherin' && <img src = {slytherin} class= "Houses-img" alt = "slytherin" />}
