@@ -88,23 +88,6 @@ class App extends Component {
           },
         })
       );
-    // fetch("https://api.spotify.com/v1/me/playlists", {
-    //   headers: { Authorization: "Bearer " + accessToken },
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) =>
-    //     this.setState({
-    //       playlists: data.items.map((item) => {
-    //         console.log(data.items);
-    //         return {
-    //           name: item.name,
-    //           imageUrl: item.images[0].url,
-    //           songs: [],
-    //         };
-    //       }),
-    //     })
-    //   );
-    
   }
   render() {
     return (
