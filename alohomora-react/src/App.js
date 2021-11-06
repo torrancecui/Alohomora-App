@@ -7,10 +7,7 @@ import gryffindor from "./images/lion.png";
 import slytherin from "./images/snake.png";
 import hufflepuff from "./images/badger.png";
 import ravenclaw from "./images/raven.png";
-
-//global for later dev
-let accessToken;
-let username = "";
+import muggle from "./images/banned.png";
 
 //return app title
 function Title(){
@@ -56,36 +53,68 @@ function LoginPage(){
 //calculates and returns house decision and logo
 class HouseDecision extends Component{
   render(){
-    //current random algo using hash of username
-    const houses = ["hufflepuff", "gryffindor", "slytherin", "ravenclaw"];
-    let hash = 0;
-    for (let i = 0; i < username.length; i++) {
-      hash += username.charCodeAt(i);
+
+    //default
+    let house;
+    let isMuggle = false;
+    
+    let topGenre = this.props.topGenre;
+
+    // console.log(topGenre);
+
+    switch (topGenre) {
+      case "pop":
+        house = "gryffindor";
+        break;
+      case "edm":
+        house = "gryffindor";
+        break;
+      case "randb":
+        house = "ravenclaw";
+        break;
+      case "classical":
+        house = "ravenclaw";
+        break;
+      case "rock":
+        house = "slytherin";
+        break;
+      case "rap":
+        house = "slytherin";
+        break;
+      case "alternative":
+        house = "hufflepuff";
+        break;
+      case "country":
+        house = "hufflepuff";
+        break;
+      default:
+        house = "muggle";
+        isMuggle = true;
     }
-    let hashNum = hash % 4;
-    let house = houses[hashNum];
 
     return (
       <div className = "Decision">
         <div 
           className = "Banner"
-          style={
-            { 
-              background: house === 'slytherin' ? "#caffbf" : 
-                          house === 'ravenclaw' ? "#a0c4ff" : 
-                          house === 'gryffindor' ? "#ffadad" : 
-                          house === 'hufflepuff' ? "#fdffb6" : 
-                          "" 
-            }
-          }
+          // style={
+          //   { 
+          //     background: house === 'slytherin' ? "#caffbf" : 
+          //                 house === 'ravenclaw' ? "#a0c4ff" : 
+          //                 house === 'gryffindor' ? "#ffadad" : 
+          //                 house === 'hufflepuff' ? "#fdffb6" : 
+          //                 "" 
+          //   }
+          // }
         >
           {house === 'gryffindor' && <img src = {gryffindor} className= "Houses-img" alt = "gryffindor" />}
           {house === 'hufflepuff' && <img src = {hufflepuff} className= "Houses-img" alt = "hufflepuff" />}
           {house === 'slytherin' && <img src = {slytherin} className= "Houses-img" alt = "slytherin" />}
           {house === 'ravenclaw' && <img src = {ravenclaw} className= "Houses-img" alt = "ravenclaw" />}
+          {house === 'muggle' && <img src = {muggle} className= "Houses-img" alt = "muggle" />}
         </div>
         <p>
-          your house is ... {house}
+          {/* your house is ... {house} */}
+          {isMuggle ? 'what are you doing here, you muggle?!' : 'your house is ... ' + house + ' !'}
         </p>
       </div>
     )
@@ -138,11 +167,12 @@ class App extends Component {
     super();
     this.state = {
       serverData: {},
+      mostListenedGenre: '',
     };
   }
   componentDidMount() {
     let parsed = queryString.parse(window.location.search);
-    accessToken = parsed.access_token;
+    let accessToken = parsed.access_token;
     if (!accessToken) return;
     fetch("https://api.spotify.com/v1/me", {
       headers: { 'Authorization': "Bearer " + accessToken },
@@ -158,8 +188,10 @@ class App extends Component {
     }).then(response => response.json())
     .then(data => {
       let topArtists = data.items;
-      let mostListenedGenre = getTopGenre(topArtists);
-      console.log(mostListenedGenre);
+      this.setState({
+        mostListenedGenre: getTopGenre(topArtists)
+      })
+      // console.log(this.state.mostListenedGenre);
     })
   }
   render() {
@@ -170,9 +202,9 @@ class App extends Component {
           //content if user is signed in already
           <div className="Content">
             <p>
-              hi {username = this.state.user.name}
+              hi {this.state.user.name}
             </p>
-            <HouseDecision />
+            <HouseDecision topGenre = {this.state.mostListenedGenre}/>
           </div>
         ) : (
           //content if user is NOT signed in
