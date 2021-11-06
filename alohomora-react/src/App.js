@@ -92,6 +92,7 @@ class HouseDecision extends Component{
   }
 }
 
+//return top genre by looking at the genres of user's top five artists
 function getTopGenre(topArtists){
   let topFiveArtists = topArtists.slice(0,5);
 
