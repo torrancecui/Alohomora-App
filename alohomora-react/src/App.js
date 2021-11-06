@@ -101,17 +101,24 @@ function getTopGenre(topArtists){
     edm: 0,
     rock: 0,
     rap: 0,
+    alternative: 0,
+    classical: 0,
+    country: 0,
   }
 
   for( const artist of topFiveArtists){
     for (const genre of artist.genres){
       if (genre.includes('pop')) genres.pop++;
-      if (genre.includes('r&b')) genres.randb++;
-      if (genre.includes('rock')) genres.rock++;
-      if (genre.includes('edm')) genres.edm++;
-      if (genre.includes('rap')) genres.rap++;
+      if (genre.includes('r&b') || genre.includes('soul') || genre.includes('blues') || genre.includes('reggae') ) genres.randb++;
+      if (genre.includes('rock') || genre.includes('metal') || genre.includes('dubstep')) genres.rock++;
+      if (genre.includes('edm') || genre.includes('electronic') || genre.includes('house') || genre.includes('dance') || genre.includes('disco')) genres.edm++;
+      if (genre.includes('rap') || genre.includes('hip') || genre.includes('trap')) genres.rap++;
+      if (genre.includes('alternative') || genre.includes('bedroom') || genre.includes('indie')) genres.alternative++;
+      if (genre.includes('classical') || genre.includes('jazz') || genre.includes('orchestra')) genres.classical++;
+      if (genre.includes('country') || genre.includes('folk')) genres.country++;
     }
   }
+  
   let max = 0;
   let topGenre;
   for (var genre in genres) {
@@ -120,7 +127,6 @@ function getTopGenre(topArtists){
       topGenre = genre;
     }
   }
-  console.log(genres);
   return topGenre;
     
 }
