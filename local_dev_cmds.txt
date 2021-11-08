@@ -1,7 +1,7 @@
 To start local dev:
 
 1. git pull from /Alohomora-App
-2. cd /alohomora-backend, execute export commands from terminal, and npm start
+2. cd /alohomora-backend, execute export client id commands from terminal, and npm start
 3. cd /alohomora-react and npm start
 4. cd /alohomora-react/src
 5. sass --watch App.scss App.css
