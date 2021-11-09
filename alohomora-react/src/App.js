@@ -40,7 +40,7 @@ function LoginPage(){
             onClick={() => {
               window.location = window.location.href.includes("localhost")
                 ? "http://localhost:8888/login"
-                : "https://alohomora-app-backend.herokuapp.com/login";
+                : "https://alohomora-backend.herokuapp.com/login";
             }}
           >
             sign in with spotify

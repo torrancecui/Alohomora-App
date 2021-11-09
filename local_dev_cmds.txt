@@ -7,4 +7,4 @@ To start local dev:
 5. sass --watch App.scss App.css
 6. ready for local dev
 7. To push changes to github, execute git commmands from /Alohomora-App
-8. To push changes to heroku, execute git commands from /alohomora-react and git push heroku master
+8. To push changes to heroku, execute git commands from /alohomora-react and /alohomora-node and git push heroku master to their respective repos
