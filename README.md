@@ -7,4 +7,4 @@ Created by Torrance Cui June 2021. Hosted and deployed on Heroku.
 
 #### Mainlink
 
-https://alohomora-app-frontend.herokuapp.com/
+https://alohomora-frontend.herokuapp.com/
