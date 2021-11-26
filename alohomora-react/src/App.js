@@ -169,7 +169,7 @@ class App extends Component {
       serverData: {},
       mostListenedGenre: '',
       topArtists: '',
-      hasError: false
+      // hasError: false
     };
   }
   componentDidMount() {
@@ -197,18 +197,18 @@ class App extends Component {
       // console.log(this.state.mostListenedGenre);
     })
   }
-  static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI.
-    return { hasError: true };
-  }
-  componentDidCatch(error){
-    console.log(error);
-  }
+  // static getDerivedStateFromError(error) {
+  //   // Update state so the next render will show the fallback UI.
+  //   return { hasError: true };
+  // }
+  // componentDidCatch(error){
+  //   console.log(error);
+  // }
   render() {
-    console.log(this.state.hasError);
-    if (this.state.hasError){
-      return <p>Error</p>
-    }else{
+    // console.log(this.state.hasError);
+    // if (this.state.hasError){
+    //   return <p>Error</p>
+    // }else{
       return (
         <div className="App">
           <Title></Title>
@@ -227,7 +227,7 @@ class App extends Component {
           <Credits></Credits>
         </div>
       );
-    }
+    // }
   }
 }
 
