@@ -168,6 +168,8 @@ class App extends Component {
     this.state = {
       serverData: {},
       mostListenedGenre: '',
+      topArtists: '',
+      hasError: false
     };
   }
   componentDidMount() {
@@ -188,31 +190,44 @@ class App extends Component {
     }).then(response => response.json())
     .then(data => {
       let topArtists = data.items;
+      console.log(topArtists)
       this.setState({
         mostListenedGenre: getTopGenre(topArtists)
       })
       // console.log(this.state.mostListenedGenre);
     })
   }
+  static getDerivedStateFromError(error) {
+    // Update state so the next render will show the fallback UI.
+    return { hasError: true };
+  }
+  componentDidCatch(error){
+    console.log(error);
+  }
   render() {
-    return (
-      <div className="App">
-        <Title></Title>
-        {this.state.user ? (
-          //content if user is signed in already
-          <div className="Content">
-            <p>
-              hi {this.state.user.name}
-            </p>
-            <HouseDecision topGenre = {this.state.mostListenedGenre}/>
-          </div>
-        ) : (
-          //content if user is NOT signed in
-          <LoginPage></LoginPage>
-        )}
-        <Credits></Credits>
-      </div>
-    );
+    console.log(this.state.hasError);
+    if (this.state.hasError){
+      return <p>Error</p>
+    }else{
+      return (
+        <div className="App">
+          <Title></Title>
+          {this.state.user ? (
+            //content if user is signed in already
+            <div className="Content">
+              <p>
+                hi {this.state.user.name}
+              </p>
+              <HouseDecision topGenre = {this.state.mostListenedGenre}/>
+            </div>
+          ) : (
+            //content if user is NOT signed in
+            <LoginPage></LoginPage>
+          )}
+          <Credits></Credits>
+        </div>
+      );
+    }
   }
 }
 

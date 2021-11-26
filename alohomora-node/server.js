@@ -13,6 +13,9 @@ let redirect_uri =
   'http://localhost:8888/callback'
 
 app.get('/login', function(req, res) {
+  if (res == null){
+    res.redirect('https://google.com');
+  }
   res.redirect('https://accounts.spotify.com/authorize?' +
     querystring.stringify({
       response_type: 'code',
