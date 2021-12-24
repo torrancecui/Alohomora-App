@@ -22,6 +22,9 @@ function Title(){
 function Credits(){
   return(
     <div className = "Credits">
+      <h3>not yet availible to public so please</h3>
+      <h3>use username <b><em>alohomoradev@gmail.com</em></b> and password <b><em>AlohomoraDev</em></b> to login</h3>
+      <br></br>
       <p>developed by torrance cui & joseph nahm</p>
       <p>harry potter credits to ms.rowling</p>
     </div>

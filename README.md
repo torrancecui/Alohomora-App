@@ -7,4 +7,6 @@ Created by Torrance Cui June 2021. Hosted and deployed on Heroku.
 
 #### Mainlink
 
+FYI: not yet availible to public so please use username alohomoradev@gmail.com and password AlohomoraDev to login.
+
 https://alohomora-frontend.herokuapp.com/
