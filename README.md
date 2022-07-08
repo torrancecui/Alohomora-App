@@ -3,7 +3,7 @@ Web app that reads Spotify users' playlists and sorts them into Harry Potter Hou
 
 #### Credits
 
-Created by Torrance Cui June 2021. Hosted and deployed on Heroku.
+Created by Torrance Cui and Joseph Nahm June 2021. Hosted and deployed on Heroku.
 
 #### Mainlink
 
