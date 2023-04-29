@@ -9,4 +9,4 @@ Created by Torrance Cui and Joseph Nahm June 2021. Hosted and deployed on Heroku
 
 FYI: not yet availible to public so please use username alohomoradev@gmail.com and password AlohomoraDev to login.
 
-https://alohomora-frontend.herokuapp.com/ (May take awhile for heroku server to do initial boot up)
+https://alohomora-spotify.netlify.app
