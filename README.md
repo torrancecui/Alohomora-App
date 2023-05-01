@@ -1,5 +1,5 @@
 # Alohomora-App
-Web app that fetches Spotify users' top genres and sorts them into Harry Potter Houses based on their music tastes.
+React/Node app that fetches Spotify users' top genres and sorts them into Harry Potter Houses based on their music tastes.
 
 ![](https://github.com/torrancecui/Alohomora-App/blob/main/alohamora.gif)
 
