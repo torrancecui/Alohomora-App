@@ -7,6 +7,6 @@ Created by Torrance Cui and Joseph Nahm June 2021. Hosted and deployed on Heroku
 
 #### Mainlink
 
-FYI: not yet availible to public so please use username alohomoradev@gmail.com and password AlohomoraDev to login.
+FYI: not yet availible for public use as Spotify has not approved the quota extension - probably due to copyright reasons lol.
 
 https://alohomora-spotify.netlify.app
